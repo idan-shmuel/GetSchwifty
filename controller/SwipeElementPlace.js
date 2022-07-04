@@ -33,7 +33,7 @@ export class SwipeElementPlace {
         elementZero.innerHTML = board[indexY][indexX];
         elementZero.setAttribute("id", elementZero.innerHTML);
         elementToSwap.setAttribute("id", tmpID);
-        elementToSwap.innerHTML = '0';
+        elementToSwap.innerHTML = '';
 
         board[emptyCellIndex[0]][emptyCellIndex[1]] = board[indexY][indexX];
         board[indexY][indexX]= 0;

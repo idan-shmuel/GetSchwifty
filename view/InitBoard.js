@@ -17,7 +17,9 @@ export class InitBoard {
                 let cell = document.createElement('td');
                 cell.setAttribute("id", cellData);
                 cell.onclick = switchPlace;
-                cell.appendChild(document.createTextNode(cellData));
+                if (cellData != 0){
+                    cell.appendChild(document.createTextNode(cellData));
+                }
                 row.appendChild(cell);
             });
 
