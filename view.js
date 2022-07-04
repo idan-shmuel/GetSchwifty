@@ -50,13 +50,13 @@ function getIndexOfEmptyCell(board, indexY, indexX) {
     if (board[indexY][indexX+1] === 0) {
         return [indexY, indexX+1];
     }
-    if (board[indexY+1][indexX] === 0) {
+    if (indexY+1 < board.length && board[indexY+1][indexX] === 0) {
         return [indexY+1, indexX];
     }
     if (board[indexY][indexX-1] === 0) {
         return [indexY, indexX-1];
     }
-    if (board[indexY-1][indexX] === 0) {
+    if (indexY-1 >= 0 && board[indexY-1][indexX] === 0) {
         return [indexY-1, indexX];
     }
     return [];
