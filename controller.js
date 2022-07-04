@@ -1,4 +1,3 @@
-
 function generateBoard(rowSize) {
     let board = [];
     let numbersToMix = [...Array(rowSize * rowSize).keys()];
@@ -46,4 +45,11 @@ class GameSquare {
         this.x = x;
         this.y = y;
     }
+}
+
+function isMoveLegal(position1, position2) {
+    if (position1.value !== 0 && position2.value !== 0) {
+        return false;
+    }
+    return Math.abs(position1.x - position2.x) === 1 || Math.abs(position1.y - position2.y) === 1;
 }
