@@ -2,7 +2,11 @@ import { GameOver } from "../controller/GameOver.js";
 import { SwipeElementPlace } from "../controller/SwipeElementPlace.js";
 
 export class InitBoard {
-    drawBoard(board) {
+    constructor(board) {
+        this.board = board;
+    }
+
+    drawBoard(board=this.board) {
         let boardTable = document.createElement('boardTable');
         let boardTableBody = document.createElement('boardTableBody');
 
