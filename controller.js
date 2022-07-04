@@ -11,6 +11,7 @@ export function generateBoard(rowSize) {
         }
         board.push(rowInArray);
     }
+
     return board;
 }
 
@@ -25,6 +26,7 @@ function getGreaterNumbersCountInArray(board, i, j) {
         }
         continueCheckAfterNumber = 0;
     }
+
     return countGreaterNumbers;
 }
 
@@ -40,6 +42,7 @@ export function isBoardSolvable(board, isEven=false) {
             }
         }
     }
+    
     return countGreaterNumbers%2 === 0;
 }
 
