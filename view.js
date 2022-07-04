@@ -1,4 +1,6 @@
-function drawBoard(board) {
+import { isGameFinished } from "./controller.js";
+
+export function drawBoard(board) {
     let boardTable = document.createElement('boardTable');
     let boardTableBody = document.createElement('boardTableBody');
 
@@ -27,6 +29,9 @@ function drawBoard(board) {
         let emptyCellIndex = getIndexOfEmptyCell(board, indexY, indexX);
         if (emptyCellIndex !== []) {
             swipeBetweenTwoElements(board, indexY, indexX, emptyCellIndex);
+            if (isGameFinished(board)) {
+                console.log("win");
+            }
         }
     }
 }
