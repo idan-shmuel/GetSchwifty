@@ -1,4 +1,4 @@
-function generateBoard(rowSize) {
+export function generateBoard(rowSize) {
     let board = [];
     let numbersToMix = [...Array(rowSize * rowSize).keys()];
 

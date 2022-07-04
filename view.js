@@ -70,4 +70,3 @@ function swipeBetweenTwoElements(board, indexY, indexX, emptyCellIndex) {
     board[emptyCellIndex[0]][emptyCellIndex[1]] = board[indexY][indexX];
     board[indexY][indexX]= 0;
 }
-drawBoard(([[6,0,7],[3,2,8],[4,5,1]]));
