@@ -24,7 +24,7 @@ function getGreaterNumbersCountInArray(board, i, j) {
     return countGreaterNumbers;
 }
 
-function isBoardSolvable(board, isEven=false) {
+export function isBoardSolvable(board, isEven=false) {
     let countGreaterNumbers = 0;
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board[0].length; j++) {
