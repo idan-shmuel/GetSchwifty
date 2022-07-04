@@ -1,4 +1,12 @@
 export class GenerateBoard {
+    generateSolvableBoard(rowSize) {
+        let board = this.generateBoard(rowSize);
+        while (!this.isBoardSolvable(board)) {
+            board = this.generateBoard(rowSize);
+        }
+        return board;
+    }
+    
     generateBoard(rowSize) {
         let board = [];
         let numbersToMix = [...Array(rowSize * rowSize).keys()];
@@ -46,6 +54,5 @@ export class GenerateBoard {
 
         return countGreaterNumbers%2 === 0;
     }
-
 }
 
