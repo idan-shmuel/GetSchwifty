@@ -1,0 +1,18 @@
+h1 {
+    font-family: Georgia, sans-serif;
+    font-size: 5em;
+}
+
+table, tr, td {
+    background: lightgreen;
+    border: 1px solid;
+}
+
+td {
+    height: 100px;
+    width: 100px;
+}
+
+body {
+    text-align: center;
+}
