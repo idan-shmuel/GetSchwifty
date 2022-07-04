@@ -1,20 +1,3 @@
-export function generateBoard(rowSize) {
-    let board = [];
-    let numbersToMix = [...Array(rowSize * rowSize).keys()];
-
-    for (let i = 0; i < rowSize; i++) {
-        let rowInArray = [];
-        for(let j = 0; j < rowSize; j++) {
-            let generatedIndex = Math.floor(Math.random() * numbersToMix.length);
-            rowInArray[j] = numbersToMix[generatedIndex];
-            numbersToMix.splice(generatedIndex,  1);
-        }
-        board.push(rowInArray);
-    }
-
-    return board;
-}
-
 function getGreaterNumbersCountInArray(board, i, j) {
     let countGreaterNumbers = 0;
     let continueCheckAfterNumber = j+1;
@@ -42,7 +25,7 @@ export function isBoardSolvable(board, isEven=false) {
             }
         }
     }
-    
+
     return countGreaterNumbers%2 === 0;
 }
 
