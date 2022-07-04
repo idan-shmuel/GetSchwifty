@@ -53,3 +53,21 @@ function isMoveLegal(position1, position2) {
     }
     return Math.abs(position1.x - position2.x) === 1 || Math.abs(position1.y - position2.y) === 1;
 }
+
+function isGameFinished(board, rowSize) {
+    let expectedArray = [...Array(rowSize * rowSize).keys()];
+    let expectedArrayCheckIndex = 1;
+    if (board[board.length-1][board[0].length-1] !== 0) {
+        return false;
+    }
+    for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board[0].length ; j++) {
+            if(expectedArray[expectedArrayCheckIndex] !== board[i][j] && expectedArrayCheckIndex < rowSize * rowSize) {
+                return false;
+            }
+            expectedArrayCheckIndex++;
+        }
+    }
+
+    return true;
+}
