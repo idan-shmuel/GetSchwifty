@@ -1,4 +1,4 @@
-import { isGameFinished } from "../controller.js";
+import { GameOver } from "../controller/GameOver.js";
 import { SwipeElementPlace } from "../controller/SwipeElementPlace.js";
 
 export class InitBoard {
@@ -32,8 +32,9 @@ export class InitBoard {
             let emptyCellIndex = swipeElementPlace.getIndexOfEmptyCell(board, indexY, indexX);
             if (emptyCellIndex !== []) {
                 swipeElementPlace.swipeBetweenTwoElements(board, indexY, indexX, emptyCellIndex);
-                if (isGameFinished(board)) {
-                    console.log("win");
+                let gameOver = new GameOver();
+                if (gameOver.isGameFinished(board)) {
+                    alert("win");
                 }
             }
         }
