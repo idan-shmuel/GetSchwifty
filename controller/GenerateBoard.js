@@ -6,7 +6,7 @@ export class GenerateBoard {
         }
         return board;
     }
-    
+
     generateBoard(rowSize) {
         let board = [];
         let numbersToMix = [...Array(rowSize * rowSize).keys()];
