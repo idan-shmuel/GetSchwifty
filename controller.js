@@ -1,3 +1,4 @@
+
 function generateBoard(rowSize) {
     let board = [];
     let numbersToMix = [...Array(rowSize * rowSize).keys()];
@@ -37,4 +38,12 @@ function isBoardSolvable(board, isEven=false) {
         }
     }
     return countGreaterNumbers%2 === 0;
+}
+
+class GameSquare {
+    constructor(value, x, y) {
+        this.value = value;
+        this.x = x;
+        this.y = y;
+    }
 }
