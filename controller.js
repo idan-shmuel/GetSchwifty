@@ -43,21 +43,6 @@ export function isBoardSolvable(board, isEven=false) {
     return countGreaterNumbers%2 === 0;
 }
 
-class GameSquare {
-    constructor(value, x, y) {
-        this.value = value;
-        this.x = x;
-        this.y = y;
-    }
-}
-
-function isMoveLegal(position1, position2) {
-    if (position1.value !== 0 && position2.value !== 0) {
-        return false;
-    }
-    return Math.abs(position1.x - position2.x) === 1 || Math.abs(position1.y - position2.y) === 1;
-}
-
 export function isGameFinished(board) {
     let expectedArray = [...Array(board.length * board[0].length).keys()];
     let expectedArrayCheckIndex = 1;
